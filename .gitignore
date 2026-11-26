@@ -1,0 +1,47 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Node.js dependencies
+node_modules/
+
+# Frontend build output
+frontend/dist/
+frontend/build/
+dist/
+build/
+
+# Environment files containing secrets (keep .env.example trackable)
+.env
+.env.*
+!.env.example
+
+# IDE and editor temporary files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating-system temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test and coverage output
+coverage/
+.coverage
+htmlcov/
+*.lcov
+playwright-report/
+test-results/
