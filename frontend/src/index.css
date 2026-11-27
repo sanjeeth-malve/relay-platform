@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #0b0e14;
+  --color-surface-1: #11161f;
+  --color-surface-2: #18202c;
+  --color-border-default: #1e293b;
+  --color-border-interactive: #2d3b4e;
+
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-metadata: #64748b;
+
+  --color-accent-cyan: #06b6d4;
+  --color-accent-emerald: #10b981;
+  --color-accent-amber: #f59e0b;
+  --color-accent-danger: #ef4444;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-relay: 6px;
+  --radius-badge: 4px;
+}
+
+:root {
+  color-scheme: dark;
+  --bg-canvas: #0b0e14;
+  --bg-surface-1: #11161f;
+  --bg-surface-2: #18202c;
+  --border-default: #1e293b;
+  --border-interactive: #2d3b4e;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-metadata: #64748b;
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-danger: #ef4444;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+  }
+
+  code,
+  pre,
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.relay-subtle-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #1e293b #0b0e14;
+}
+
+.relay-subtle-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.relay-subtle-scroll::-webkit-scrollbar-track {
+  background: #0b0e14;
+}
+
+.relay-subtle-scroll::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+.relay-subtle-scroll::-webkit-scrollbar-thumb:hover {
+  background: #2d3b4e;
+}
+
+/* Dark enterprise overrides for @xyflow/react controls & attribution */
+.relay-react-flow .react-flow {
+  --xy-background-color: #0b0e14;
+  --xy-edge-stroke: #2d3b4e;
+  --xy-edge-stroke-selected: #06b6d4;
+  --xy-node-boxshadow-hover: none;
+  --xy-node-boxshadow-selected: none;
+  --xy-controls-button-background-color: #11161f;
+  --xy-controls-button-background-color-hover: #18202c;
+  --xy-controls-button-color: #94a3b8;
+  --xy-controls-button-color-hover: #f1f5f9;
+  --xy-controls-button-border-color: #1e293b;
+  --xy-controls-box-shadow: none;
+  --xy-attribution-background-color: transparent;
+}
+
+.relay-react-flow .react-flow__controls {
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.relay-react-flow .react-flow__attribution {
+  color: #64748b;
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.relay-react-flow .react-flow__attribution a {
+  color: #64748b;
+}

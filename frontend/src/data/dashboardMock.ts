@@ -1,0 +1,137 @@
+import type { DashboardOverviewData } from "../types/dashboard";
+
+/**
+ * Static mock dataset for the Dashboard / Overview screen (`/`).
+ * Kept strictly separated from future `/api/v1/*` TanStack Query services.
+ */
+export const DASHBOARD_OVERVIEW_MOCK: DashboardOverviewData = {
+  kpis: [
+    {
+      id: "active-runs",
+      label: "ACTIVE RUNS",
+      value: "4",
+      subtext: "2 in enrichment",
+      tone: "cyan",
+      pulse: true,
+    },
+    {
+      id: "pending-approvals",
+      label: "PENDING APPROVALS",
+      value: "3",
+      subtext: "Action required",
+      tone: "amber",
+    },
+    {
+      id: "verified-reports",
+      label: "VERIFIED REPORTS",
+      value: "28",
+      subtext: "98.4% pass rate",
+      tone: "emerald",
+    },
+    {
+      id: "avg-execution-time",
+      label: "AVG. EXECUTION TIME",
+      value: "1m 42s",
+      subtext: "Last 7 days",
+      tone: "neutral",
+    },
+  ],
+  activeRunsLabel: "5 runs",
+  activities: [
+    {
+      id: "RLY-104",
+      title: "Sales Prospect Research — Top 5 Indian SaaS",
+      status: "running",
+      stageLabel: "Enrichment · Olostep",
+      progress: 68,
+      actionLabel: "Inspect",
+      actionPath: "/tasks/RLY-104",
+      updatedAt: "Live",
+    },
+    {
+      id: "RLY-103",
+      title: "Competitor Pricing Matrix — Q4 Cloud Tools",
+      status: "verifying",
+      stageLabel: "Verification Engine",
+      progress: 88,
+      actionLabel: "Inspect",
+      actionPath: "/tasks/RLY-103",
+      updatedAt: "Live",
+    },
+    {
+      id: "RLY-102",
+      title: "Fintech Funding Brief — Bengaluru Series B",
+      status: "waiting_approval",
+      stageLabel: "Awaiting Approval",
+      progress: 45,
+      actionLabel: "Review",
+      actionPath: "/approvals",
+      updatedAt: "14m ago",
+    },
+    {
+      id: "RLY-101",
+      title: "Enterprise Vendor Due Diligence",
+      status: "running",
+      stageLabel: "Company Discovery · Crustdata",
+      progress: 24,
+      actionLabel: "Inspect",
+      actionPath: "/tasks/RLY-101",
+      updatedAt: "Live",
+    },
+    {
+      id: "RLY-099",
+      title: "SaaS Churn Benchmark Report",
+      status: "completed",
+      stageLabel: "Completed",
+      progress: 100,
+      actionLabel: "Report",
+      actionPath: "/reports/RLY-099",
+      updatedAt: "2h ago",
+    },
+  ],
+  pendingApprovalsCountLabel: "3 required",
+  pendingApprovals: [
+    {
+      id: "apr-102",
+      taskId: "RLY-102",
+      title: "Series B Checkpoint",
+      description: "Authorize external deep-crawl on 12 enterprise domains",
+      requestedAt: "14m ago",
+      reviewPath: "/approvals",
+    },
+    {
+      id: "apr-098",
+      taskId: "RLY-098",
+      title: "Budget Threshold",
+      description: "LLM token consumption quota exceeded 85% for EMEA batch",
+      requestedAt: "42m ago",
+      reviewPath: "/approvals",
+    },
+  ],
+  recentDeliverables: [
+    {
+      id: "rep-099",
+      taskId: "RLY-099",
+      title: "SaaS Churn Benchmark Q3",
+      verifiedLabel: "Verified ✓",
+      timestamp: "2h ago",
+      reportPath: "/reports/RLY-099",
+    },
+    {
+      id: "rep-095",
+      taskId: "RLY-095",
+      title: "SOC-2 Compliance Cross-Audit",
+      verifiedLabel: "Verified ✓",
+      timestamp: "5h ago",
+      reportPath: "/reports/RLY-095",
+    },
+    {
+      id: "rep-091",
+      taskId: "RLY-091",
+      title: "Cybersecurity Vendor Matrix",
+      verifiedLabel: "Verified ✓",
+      timestamp: "1d ago",
+      reportPath: "/reports/RLY-091",
+    },
+  ],
+};
